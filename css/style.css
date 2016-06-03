@@ -2,3 +2,121 @@ html,body {
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: url("http://rethinkcleveland.org/Cleveland/media/Cleveland/Photos%20Reese%20to%20Add/Cleveland-night-webready.jpg");
+  background-size: cover;
+  color:white;
+  text-align: center;
+}
+
+#homePageh1 {
+  text-align:center;
+  font-size: 35;
+  padding:0px 0px 0px 0px;
+  color: white;
+  margin: 15px 450px 40px 450px;
+  background: rgba(255,255,255,0.25);
+  background-size: 10px 10px;
+
+}
+
+#profPic {
+  margin: 50 auto;
+  padding: 1000;
+  width: 200px;
+  height:230px;
+  border: 7px solid white;
+  border-radius: 40px;
+  align-items: center;
+}
+
+#links {
+  background: rgba(255,255,255,0.85);
+  margin: 20px 250px 20px 250px;
+  align-items: center;
+}
+
+.link {
+  display: inline;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+}
+
+#ContactTitle{
+  font-size: 30px;
+  background: rgba(0,0,0,0.75);
+  margin: 20px 250px 20px 250px;  
+
+}
+
+.ContactBody{
+  font-size: 20px;
+  background: rgba(0,0,0,0.75);
+  margin: 20px 250px 20px 250px;
+}
+
+#links2{
+  background: rgba(255,255,255,0.85);
+  margin: 20px 250px 20px 250px;
+  align-items: center;
+}
+.link2{
+  display: inline;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+}
+
+#SubPageH1 {
+  text-align:center;
+  font-size: 35;
+  padding:0px 0px 0px 0px;
+  color: white;
+  margin: 15px 450px 40px 450px;
+  background: rgba(0,0,0,0.75);
+  background-size: 10px 10px;
+}
+
+.body {
+  margin: 18px;
+  background: rgba(0,0,0,0.75);
+
+}
+
+#AbLink{
+  background: rgba(0,0,0,0.20);
+}
+
+h2 {
+  text-align:center;
+  font-size: 25;
+  padding:3px;
+  margin: 15px 450px 40px 450px;
+  background: rgba(0,0,0,0.75)
+}
+
+.resumeH2 {
+  text-align:left;
+  font-size: 25;
+  padding:15px;
+  margin: 15px 900px 15px 10px;
+  background: rgba(0,0,0,0.95)
+}
+
+h3{
+  text-align:left;
+  font-size: 15;
+  padding:15px;
+  margin: 15px 900px 15px 10px;
+  background: rgba(0,0,0,0.55) 
+}
+
+.resPara {
+  text-align:left;
+  font-size: 10;
+  padding:15px;
+  margin: 15px 10px 15px 10px;
+  background: rgba(255,255,255,0.25) 
+}
+
+
