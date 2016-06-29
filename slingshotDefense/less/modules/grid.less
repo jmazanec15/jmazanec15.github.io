@@ -1,0 +1,152 @@
+// create max- width and min-width so that the row cannot be bigger 
+// or smaller than the specified values
+@max-width: 1140px;
+@min-width: 755px;
+
+// max number of total number of columns to loop through later
+@total-columns: 12;
+
+// margin between two different elements
+@gutter: 3%;
+
+
+// padding between stuff inside container and its edge
+.container {
+  padding: 0 30px;
+}
+
+
+// row is as big as what it is inside
+// clearfix google meaning not sure what it does
+.row {
+  width: 100%;
+  max-width: @max-width;
+  min-width: @min-width;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  .clearfix;
+
+
+}
+
+
+// Creating columns
+
+
+// pretty much a while loop
+.create-columns(@i) when (@i>0) {
+  // math to make sure that everything fits
+  @column-width: (((@max-width * @i) / @total-columns) * 100) / @max-width;
+  // width to consider for margins
+  @missing-width: (@gutter * ((@total-columns / @i) - 1)) / (@total-columns / @i);
+  // final width
+  @width: @column-width - @missing-width; 
+
+// properties on whatever column class you use
+  .col-@{i} {
+    display: block;
+    position: relative;
+    float: left;
+    width: @width;  
+    margin-right: @gutter;
+
+    // make sure last element doesnt have a margin on its right
+    &:last-child  {
+      margin-right: 0;
+    } 
+  }
+
+  .create-columns(@i - 1);
+}
+
+.create-columns(@total-columns);
+
+// Clear Fix mixin
+.clearfix() {
+  *zoom:1;
+
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+
+}
+
+.container:nth-child(2) .row .col-12 {
+  background-color: lightblue;
+  position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  .bird {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: black;
+  }
+  .boat1 {
+    position: absolute;
+    height: 10px;
+    width: 100px;
+    background-color: black;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .boat2 {
+    position: absolute;
+    height: 10px;
+    width: 100px;
+    background-color: black;
+    margin: 0;
+    bottom: 0;
+    right: 0;
+  }
+  .slingshot {
+    height: 70px;
+    width: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 535px;
+    background-color: black;
+    -webkit-transform: rotate(0deg);  /* Chrome, Safari 3.1+ */
+    -moz-transform: rotate(0deg);  /* Firefox 3.5-15 */
+    -ms-transform: rotate(0deg);  /* IE 9 */
+    -o-transform: rotate(0deg);  /* Opera 10.50-12.00 */
+    transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera 12.10+ */
+    transform-origin: 50% 100%;
+  }
+  .bullet {
+    height: 5px;
+    width: 5px;
+    background-color: blue;
+    position: absolute;
+    bottom: 40px;
+    left: 500px;
+  }  
+}
+.semicirc {
+    height:40px;
+    width:80px;
+    border-radius: 90px 90px 0 0;
+    -moz-border-radius: 90px 90px 0 0;
+    -webkit-border-radius: 90px 90px 0 0;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 502px;
+}
+
+
+.bomb {
+  height: 5px;
+  width: 5px;
+  background-color: black;
+  position: absolute;
+
+}
+
